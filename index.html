@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>RPS</title>
+</head>
+<style>
+    html,body{
+        overflow-x: hidden;
+    }
+    body{
+        background-color:#203540;
+        font-family: 'finger paint', cursive;
+        color: #fff;
+    }
+   .play{
+    width: 100px;
+    margin: 0 auto;
+   }
+   button{
+    border: none;
+   }
+</style>
+<body>
+  <div>
+    <marquee behavior="alternate" direction="right">Designed By <span class="fw-bold">MovicDev</span></marquee>
+    <h1 class="text-center">Rock - Paper - Scissors</h1>
+    <div class="row mx-auto col-10 col-lg-5 py-3 border mt-3 justify-between">
+        <div class="col">
+            <p class="fw-bold">Player: <span id="playerDisplay"></span></p>
+            <p class="fw-bold">Computer: <span id="computerDisplay"></span></p>
+            
+        </div>
+        <div class="col d-flex justify-between text-center mx-auto gap-5">
+            <P class="border p-2 play" style="color: #203540; background-color: #fff;">Player <br>
+            <span class="fs-1" id="playerScore">0</span>
+            </P>
+            <P class="border p-2 play" style="color: #203540; background-color: #fff;">Computer
+                <br>
+                <span class="fs-1" id="computerScore">0</span>
+            </P>
+        </div>
+    </div>
+  
+    <div>
+        <p id="resultDisplay" class="text-center my-2 fs-5 p-2 w-25 mx-auto"></p>
+        <div class="row mt-2 col-lg-5 gap-2  mx-auto mt-5">
+            <button onclick="playGame('rock')" class="btn btn-light mx-auto" style="font-size: 60px; border-radius: 50%; width: 150px; height: 150px; border: 20px solid blue;">👊</button>
+            <button onclick="playGame('paper')" class="btn btn-light mx-auto" style="font-size: 60px; border-radius: 50%; width: 150px; height: 150px; border: 20px solid rgba(250, 250, 31, 0.986);">🤚</button> 
+            <p class="text-center">
+             <button onclick="playGame('scissors')" class="btn btn-light justify-center mx-auto" style="font-size: 60px; border-radius: 50%; width: 150px; height: 150px; border: 20px solid red;">✌</button>
+            </div>
+            </p>
+            <p class="float-end me-5"><button class="btn text-light mx-auto text-center justify-center" style="border-color: #fff;" onclick="res()">Reset Score</button></p>
+        </div>
+        
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
